@@ -1,0 +1,25 @@
+<header class="admin">
+  <section class="pull-right">
+    <%= link_to t(:edit), '#collapse-edit-artist', data: {toggle: :collapse}, class: 'btn btn-success' %>
+    <%= link_to t(:new_tab), '#collapse-new-tab', data: {toggle: :collapse}, class: 'btn btn-primary' %>
+    <%= link_to t(:artists), admin_artists_path, class: 'btn btn-default' %>
+    <%= link_to t(:delete), [:admin, @artist], method: :delete, data: {confirm: t(:confirm)}, class: 'btn btn-danger' if @artist.destroyable? %>
+  </section>
+  <h1><%= icon :child %> <%= @artist.name %></h1>
+</header>
+
+<section id="visits">
+  <%= t :visits %> <%= @artist.visits_count %> <%= link_to t(:remove_visits), [:remove_visits, :admin, @artist], method: :post, data: {confirm: t(:confirm)} %>
+</section>
+
+<section id="collapse-new-tab" class="mini-form collapse out">
+  <%= render 'admin/tabs/form' %>
+</section>
+
+<section id="collapse-edit-artist" class="mini-form collapse out">
+  <%= render 'form' %>
+</section>
+
+<section class="tab-list list-group">
+  <%= render partial: 'admin/tabs/tab', collection: @tabs %>
+</section>

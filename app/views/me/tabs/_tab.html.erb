@@ -1,0 +1,5 @@
+<%= link_to [:me, tab], class: 'list-group-item' do %>
+  <%= tab.title %>
+  <%= content_tag :span, nil, class: "star-ranking ranking-#{tab.ranking.round}", title: tab.ranking %>
+  <%= content_tag :span, tab.artist.name, class: 'badge artist-name' %>
+<% end %>

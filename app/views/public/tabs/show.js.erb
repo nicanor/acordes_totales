@@ -1,0 +1,9 @@
+$( '#transposer').html('<%= j transpose_btn_group  @tab, semitones: @semitones, notation: @notation %>');
+$(   '#notation').html('<%= j change_notation_link @tab, @semitones, @notation %>');
+$('#page-header').html('<%= j render 'header' %>');
+$('#tab-content').html('<%= j @content.html_safe %>');
+var tab_list = $('.tab-list');
+tab_list.find('.active-tab').removeClass('active-tab');
+tab_list.find('#tab-item-<%= @tab.id %>').addClass('active-tab');
+
+initialize_chords();

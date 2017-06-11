@@ -1,0 +1,10 @@
+<header class="page-header">
+  <%= link_to t(:back), me_root_path, class: 'btn btn-primary pull-right' if @user == current_user %>
+  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+</header>
+
+<%= image_tag @user.photo.thumb('400x').url, class: 'img-thumbnail' if @user.photo %>
+
+<section class="personal-tab-list list-group">
+  <%= render partial: 'public/tabs/tab', collection: @user.tabs, locals: {show_artist: false} %>
+</section>

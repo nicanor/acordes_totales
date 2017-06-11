@@ -1,0 +1,7 @@
+<header class="jumbotron">
+  <h1><span class="error-code">404</span></h1>
+  <h1><%= t :not_found %></h1>
+  <p><code class="url"><%= request.url %></code></p>
+  <p><%= t :not_found_explanation %></p>
+  <p><%= link_to t(:home), root_path, class: 'btn btn-primary btn-lg' %></p>
+</header>

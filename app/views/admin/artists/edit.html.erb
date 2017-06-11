@@ -1,0 +1,7 @@
+<header class="admin">
+  <h1><%= t :edit%> <%= @artist.name %></h1>
+  <%= link_to t(:artists), admin_artists_path %>
+  <%= link_to t(:delete), [:admin, @artist], method: :delete, data: {confirm: t(:confirm)} %>
+</header>
+
+<%= render 'form' %>

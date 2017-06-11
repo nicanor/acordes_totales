@@ -1,0 +1,14 @@
+<footer id="footer" class="navbar navbar-default">
+  <div class="container">
+
+    <p class="navbar-text"><%= icon :heart %> <%= t(:footer) %></p>
+
+    <section class="social navbar-right">
+      <%= link_to icon('facebook')   , facebook_url   , class: 'btn navbar-btn btn-primary', target: '_blank' %>
+      <%= link_to icon('google-plus'), google_plus_url, class: 'btn navbar-btn btn-danger' , target: '_blank' %>
+      <%= link_to xaver_url, class: 'xaver btn navbar-btn btn-default' , target: '_blank' do %>
+        <%= icon('soundcloud text-primary') %> <%= content_tag :span, 'Xaver', class: 'xaver-text' %>
+      <% end %>
+    </section>
+  </div>
+</footer>

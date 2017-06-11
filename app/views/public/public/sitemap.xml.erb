@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>http://acordestotales.com</loc></url>
+
+  <url><loc>http://acordestotales.com/paginas</loc></url>
+
+  <% @pages.each do |page| %>
+  <url><loc>http://acordestotales.com<%= page_path(page) %></loc></url>
+  <% end %>
+
+  <url><loc>http://acordestotales.com/artistas</loc></url>
+
+  <% @artists.each do |artist| %>
+  <url><loc>http://acordestotales.com<%= artist_path(artist) %></loc></url>
+    <% artist.tabs.each do |tab| %>
+  <url><loc>http://acordestotales.com<%= artist_tab_path(artist, tab) %></loc></url>
+    <% end %>
+  <% end %>
+</urlset>

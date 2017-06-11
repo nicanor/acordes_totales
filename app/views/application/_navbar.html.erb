@@ -1,0 +1,36 @@
+<nav id="navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container-fluid">
+
+    <%= render 'navbar_header' %>
+
+    <nav id="navbar-collapse" class="collapse navbar-collapse" role="navigation">
+
+      <% if logged_in? %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <%= content_tag :li,  link_to(t(:admin) , admin_artists_path) if current_user.role == 'admin' %>
+              <%= content_tag :li,  link_to(t(:logout), logout_path, method: :post)  %>
+            </ul>
+          </li>
+        </ul>
+        <p class="navbar-text navbar-right">
+          <%= link_to [:me, :root], class: 'navbar-link' do %>
+            <%= current_user.first_name %> <%= current_user.last_name %>
+          <% end %>
+        </p>
+      <% else %>
+        <nav class="pull-right">
+          <%= link_to t(:login), login_path, class: 'btn btn-default navbar-btn' %>
+          <%= link_to icon(:facebook)    , "/auth/facebook", class: 'tooltiped hidden-sm btn navbar-btn btn-primary', title: t(:login_with_facebook), data: {placement: :bottom} %>
+          <%= link_to icon('google-plus'), "/auth/google_oauth2", class: 'tooltiped hidden-sm btn navbar-btn btn-danger' , title: t(:login_with_googleplus), data: {placement: :bottom}  %>
+          <%= link_to icon(:twitter)     , "/auth/twitter" , class: 'tooltiped hidden-sm btn navbar-btn btn-primary', title: t(:login_with_twitter), data: {placement: :bottom} %>
+        </nav>
+      <% end %>
+
+      <%= render 'public/search/form' unless @home %>
+
+    </nav><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,7 @@
+<h1><%= link_to t(:popular_artists), :artists %></h1>
+
+<ul class="nav nav-pills nav-stacked artist-list">
+  <% artists.each do |artist| %>
+    <li><%= link_to artist.name, artist %></li>
+  <% end %>
+</ul>

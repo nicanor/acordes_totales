@@ -1,0 +1,12 @@
+<header id='page-header' class="page-header">
+  <%= render 'header' %>
+</header>
+
+<pre id="tab-content" class="tab-content">
+<%= @content.html_safe %>
+</pre>
+
+<%= content_for :aside_right do %>
+  <%= image_tag @artist.photo.thumb('300x450').url, class: 'artist-photo thumbnail' if @artist.photo %>
+  <%= render 'tab_aside', tabs: @tabs, remote: false %>
+<% end %>

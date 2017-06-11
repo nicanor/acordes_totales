@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head><%= render 'head' %></head>
+  <body>
+
+    <%= render 'navbar' %>
+
+    <section id="content" class="container-fluid">
+      <div class="row">
+
+        <aside class="aside aside-left col-md-2">
+          <%= render 'nav' %>
+          <%= render partial: 'public/public/popular_artists', locals: {artists: @artists} %>
+        </aside>
+
+        <section id="main" class="col-md-7">
+          <%= flash_messages if flash %>
+          <%= yield %>
+        </section>
+
+        <aside class="aside aside-right col-md-3">
+          <% if content_for? :aside_right %>
+            <%= yield :aside_right %>
+          <% else %>
+            <%= render partial: 'public/public/tab_aside', locals: {tabs: @tabs} %>
+          <% end %>
+        </aside>
+
+      </div>
+    </section> <!-- /container -->
+
+    <%= render 'footer' %>
+  </body>
+</html>

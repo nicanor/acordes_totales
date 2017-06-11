@@ -1,0 +1,6 @@
+<%= custom_form_for [:me, @tab] do |f| %>
+  <%= f.association :artist, collection: Artist.order(:name) %>
+  <%= f.input :title, autofocus: true %>
+  <%= f.input :content, input_html: {class: 'form-control monospaced-field'}, placeholder: 'Do#    Sol' %>
+  <%= f.button :submit, name: nil, data: {disable_with: t(:wait)}, class: [:btn, :'btn-primary'] %>
+<% end %>

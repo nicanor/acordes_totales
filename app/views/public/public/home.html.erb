@@ -1,0 +1,19 @@
+<header class="brand-header text-center">
+  <%= image_tag 'guitar.png' %>
+  <h1><%= t :brand_html %></h1>
+
+  <%= form_for (@search || Search.new), url: search_path, method: :get do |f| %>
+    <section class="form-group home-search">
+      <%= f.search_field :query, class: 'form-control input-lg', placeholder: t(:query), autofocus: true %>
+      <p class="help-block"><%= t :site_description %></p>
+    </section>
+    <%= button_tag( t(:search), name: nil, type: 'submit', class: 'btn btn-primary btn-lg btn-search') %>
+  <% end %>
+
+</header>
+
+<section class="home-artists">
+  <%= render @artists.first(5) %>
+</section>
+
+<p class="text-center"><%= link_to t(:more_artists), artists_path, class: 'btn btn-link' %></p>

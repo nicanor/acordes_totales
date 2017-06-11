@@ -1,0 +1,15 @@
+<h1><%=  t :popular_tabs %></h1>
+<section class="tab-list list-group">
+  <% remote ||= false %>
+  <% tabs.each do |tab| %>
+    <%= link_to artist_tab_path(tab.artist, tab), remote: remote, id: "tab-item-#{tab.id}", class: 'list-group-item' do %>
+      <%= content_tag :span, nil, class: "star-ranking ranking-#{tab.stars}", title: tab.ranking %>
+      <%= tab.title %>
+      <% if @artist %>
+        <p><%= t :by %> <%= tab.user ? "#{tab.user.first_name} #{tab.user.last_name}" : t(:anonymous) %></p>
+      <% else %>
+        <p><%= tab.artist.name %></p>
+      <% end %>
+    <% end %>
+  <% end %>
+</section>

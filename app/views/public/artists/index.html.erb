@@ -1,0 +1,9 @@
+<header class="page-header">
+  <h1><%= t :popular_artists %></h1>
+</header>
+<%= paginate @artists, theme: :bootstrap %>
+<ul class="media-list">
+  <%= render @artists %>
+</ul>
+
+<%= content_for :aside_right, render('tab_aside', tabs: @tabs) %>

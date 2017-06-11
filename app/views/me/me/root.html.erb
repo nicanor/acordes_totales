@@ -1,0 +1,14 @@
+<header class="page-header">
+  <nav class="pull-right">
+    <%= link_to t(:public_profile),     [@me] , class: 'btn btn-warning' %>
+    <%= link_to t(:settings), [:me, :settings], class: 'btn btn-primary' %>
+  </nav>
+  <h1><%= @me.first_name %> <%= @me.last_name %></h1> 
+</header>
+
+<%= link_to t(:new_tab_html), [:new, :me, :tab], class: 'btn btn-warning btn-sm pull-right' %>
+<h2><%= icon 'file-text' %> <%= t :your_tabs %></h2>
+<%= content_tag :section, render(@my_tabs), class: 'tab-list list-group' %>
+
+<h2><%= icon :bookmark %> <%= t :favorites %></h2>
+<%= content_tag :section, render(partial: 'me/me/favorite', collection: current_user.favorites), class: 'tab-list list-group' %>

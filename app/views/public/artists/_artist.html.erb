@@ -1,0 +1,11 @@
+<article class="media">
+  <%= link_to artist do %>
+  <section class="media-left">
+    <%= image_tag(artist.photo ? artist.photo.thumb('64x64#').url : 'guitar64b.jpg', class: 'img-circle' ) %>
+  </section>
+  <div class="media-body">
+    <h4 class="media-heading"><%= artist.name %></h4>
+    <p><%= t :tabs_count, count: artist.tabs_count %></p>
+  </div>
+  <% end %>
+</article>

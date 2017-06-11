@@ -1,0 +1,23 @@
+<header class="page-header">
+  <h1><%= t :login %></h1>
+</header>
+
+<%= custom_form_for @login_form, url: submit_login_path do |f| %>
+  <p class="help-block"><%= t :how_to_login %></p>
+  <%= f.input :email, autofocus: true %>
+  <%= f.input :password %>
+  <%= f.button :submit, name: nil, value: t(:login), data: {disable_with: t(:wait)}, class: [:btn, :'btn-primary'] %>
+  <p class="help-block"><%= t :forgot_password %> <%= link_to t(:click_here), forgot_password_path %></p>
+<% end %>
+
+<%= link_to "/auth/facebook", class: 'btn btn-primary' do %>
+  <%= icon 'facebook-square' %> <%= t :login_with_facebook %>
+<% end %>
+
+<%= link_to "/auth/google_oauth2", class: 'btn btn-danger' do %>
+  <%= icon 'google-plus' %> <%= t :login_with_googleplus %>
+<% end %>
+
+<%= link_to "/auth/twitter", class: 'btn btn-primary' do %>
+  <%= icon 'twitter-square' %> <%= t :login_with_twitter %>
+<% end %>

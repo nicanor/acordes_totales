@@ -1,0 +1,29 @@
+== Acordes Totales website
+
+Code of AcordesTotales website. Using Ruby on Rails 4.2.0.
+Deleted some config files with passwords and stuff, so probably won't work,
+but I hope it can be still helpful for someone.
+
+This App has:
+
+* Ruby 2.1.2
+
+* Rails 4.2.0
+
+* Admin authentication by Sorcery.
+
+* Users authentication by Omniauth.
+
+* Postgresql Database.
+
+* A lot of cool stuff.
+
+* CMS for important pages.
+
+* Can login and create tablatures.
+
+* Visit counter for each tab.
+
+* Can add tab to favorite.
+
+* Can punctuate a tab.

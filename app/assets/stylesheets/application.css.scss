@@ -1,0 +1,450 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require paper
+ *= require print
+ *= require_self
+ */
+
+//.bg-primary         { #2c3e50;
+//a.bg-primary:hover  { #1a242f;
+//.bg-success         { #18bc9c;
+//a.bg-success:hover  { #128f76;
+//.bg-info            { #3498db;
+//a.bg-info:hover     { #217dbb;
+//.bg-warning         { #ff9800;
+//a.bg-warning:hover  { #c87f0a;
+//.bg-danger          { #e74c3c;
+//a.bg-danger:hover   { #d62c1a;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 70px;
+}
+
+nav.navbar {
+ // background-color: #111;
+}
+
+.navbar-header > a.navbar-brand:hover {
+  color: #999;
+}
+
+section.form-group {
+  //width:250px;
+}
+.home-search {
+  & > input {
+    border: 1px #0d87e9 solid !important;
+    padding-left: 1em !important;
+    //background-color: #f5f5f5;
+  }
+}
+
+.navbar .navbar-form {
+  input.form-control {
+    width:100%;
+  }
+}
+
+.admin-checkboxes {
+
+  height: 70px;
+
+  input[type=checkbox] {
+    position: absolute;
+    margin-left: 0px;
+  }
+}
+
+#main {
+  margin-bottom:20px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  margin:0px;
+
+  border-radius: 0px;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .xaver-text {
+    color: #f22;
+    font-weight: bold;
+  }
+}
+
+h2 {
+  color: #ff9800;
+  font-size: 1.6em;
+}
+
+h3 {
+  color: #ff9800;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+header.page-header {
+  margin-top: 0px;
+
+  h1 {
+    margin-top: 0.2em;
+    font-size:  3em;
+
+    small > a:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    margin-top: 0em;
+  }
+}
+
+header.brand-header {
+  h1 {
+    margin-top: 0em;
+    font-size:  4em;
+  }
+
+  p { font-size: 1.2em; }
+}
+
+aside.aside h1 {
+  color: #ff9800;
+  margin-top: 1em;
+  font-size: 1.2em;
+  a, a:hover {
+    color: #ff9800;//#F F7518; // Orange
+    text-decoration: none;
+  }
+}
+
+span.secondary {
+  color: #ff9800; // Orange
+  text-transform: uppercase;
+}
+
+pre.tab-content {
+  color: #333;
+  background-color: #ffffff;
+  border: none;
+  padding-left:0px;
+  line-height: 1.2em;
+}
+
+ul.nav-pills > li > a {
+  color: #444;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+section.tab-list > a {
+  padding-top: 0.34em;
+  padding-bottom: 0.34em;
+  border-left:none;
+  border-right:none;
+
+  & > span.artist-name {
+    color: #333;
+    background-color: #ffffff;
+    width: 300px;
+    text-align: left;
+  }
+  &:hover > span.artist-name {
+    background-color: #f5f5f5;
+  }
+}
+
+section.personal-tab-list > a {
+  border-left:none;
+  border-right:none;
+}
+
+ul.artist-list > li.untouchable > a {
+  pointer-events: none;
+  cursor: default;
+}
+
+section.artist-photo > section.caption > h1 {
+  margin-top: 0.6em;
+  font-size: 1.4em;
+}
+
+section#bio > pre {
+  border:none;
+  background-color:#ffffff;
+  font-family: sans-serif;
+}
+
+section#bio > header {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1em;
+}
+
+span.visits_count {
+  min-width: 50px;
+  text-align:right;
+}
+
+span.artist-slug {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+section.tab-list {
+  & > a.list-group-item:hover > span.artist-slug {
+    background-color: #f5f5f5;
+  }
+
+  & > a.active-tab {
+    background-color: #ff9800; /* Orange  */
+    color:white;
+    pointer-events: none;
+    cursor: default;
+    span,p { color: white;}
+
+  }
+
+  & p {
+    margin:0px;
+    color: #8a8a8a;
+  }
+}
+
+
+/* Vote Section */
+
+section.vote {
+  display:block;
+  padding:0px;
+  margin: 0px;
+  font-size: 1.2em;
+}
+
+section.vote:hover > a {
+  color: #ff9800; /* Orange  */
+}
+
+section.vote > a {
+  color: #888;
+}
+
+section.vote > a:hover ~ a {
+  color: #888;
+}
+
+section.vote > a.vote-label,
+a.transcriptor {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #ff9800; /* Orange  */
+}
+
+section.vote > a.vote-label:hover,
+a.transcriptor {
+  text-decoration: none;
+}
+
+textarea.monospaced-field {
+  font-family: monospace;
+  height:300px !important;
+  max-height:300px !important;
+  resize: none;
+}
+
+section.page-description {
+  margin-top:10px;
+}
+
+span.error-code {
+  font-size:2em;
+}
+
+header.jumbotron {
+  padding-top:0px;
+  background-color: #ffffff;
+}
+
+code.url {
+  font-size: 1em;
+  background-color: #ffffff;
+  color: #ff9800; /* Orange  */
+  padding-left:20px;
+  padding-right:20px;
+  border: 2px solid #ff9800;
+}
+
+span.fa-lock {
+  color: #ff9800; /* Orange  */
+}
+
+h1 > span.fa-lock {
+  font-size:0.4em;
+}
+
+a.navbar-link:hover {
+  text-decoration: none;
+}
+
+section.mini-form {
+  margin-bottom: 20px;
+}
+
+section.social > a {
+  //width: 3em;
+  font-size: 1.2em;
+}
+
+a.xaver {
+  font-size:      1em;
+  font-weight:    bolder;
+  text-transform: uppercase;
+  padding-left:   0.5em;
+  padding-right:  0.5em;
+  i {font-size: 1.2em;}
+}
+
+article.media{
+  margin-top:0px;
+  > a {
+    padding: 20px;
+    display: block;
+    width:100%;
+    text-decoration:none;
+    //padding-bottom: 2em;
+    &:hover {
+      background-color: #f5f5f5;
+      .media-heading:after{
+        float: right;
+        font-family: FontAwesome;  //\2605
+        font-size: 0.6em;
+        color: #999;
+        padding-left: 1em;
+        content: "ver más \f0fe";
+      }
+    }
+  }
+  .media-left {
+    padding-right: 2em;
+  }
+
+  .media-body {
+    a {font-size: 0.8em;}
+  }
+  //border-bottom: 1px #ddd solid;
+}
+
+section.list-group > a > span.active {
+  width: 100px;
+  background-color: #3fb618;
+}
+section.list-group > a > span.pending {
+  width: 100px;
+  background-color: #ff0039;
+}
+
+#tab-content .tooltip-inner {
+  text-align: left;
+  line-height: 1em;
+  font-size: 1.4em;
+  background-color: #000;
+  min-width:13em;
+  width: 13em;
+  font-weight: bold;
+}
+
+span.chord {
+  color: #3498db;
+  cursor: pointer;
+}
+
+a.refresh > span.text {
+  padding: 0px;
+  text-align:left;
+}
+
+a.refresh:hover > span {
+  display: none;
+}
+
+a.refresh > i {
+  display: none;
+}
+
+a.refresh:hover > i {
+  display: inline;
+}
+
+section#favorite {
+  float: right !important;
+}
+
+.star-ranking {
+  width: 5em;
+  float: right;
+  text-align: left;
+}
+
+.star-ranking, .vote-ranking{
+  font-family: FontAwesome;  //\2605
+  color: #ff9800;
+
+  &.ranking-0:before  {}
+  &.ranking-1:before  {content: "\f089";}
+  &.ranking-2:before  {content: "\f005";}
+  &.ranking-3:before  {content: "\f005\f089";}
+  &.ranking-4:before  {content: "\f005\f005";}
+  &.ranking-5:before  {content: "\f005\f005\f089";}
+  &.ranking-6:before  {content: "\f005\f005\f005";}
+  &.ranking-7:before  {content: "\f005\f005\f005\f089";}
+  &.ranking-8:before  {content: "\f005\f005\f005\f005";}
+  &.ranking-9:before  {content: "\f005\f005\f005\f005\f089";}
+  &.ranking-10:before {content: "\f005\f005\f005\f005\f005";}
+}
+
+section#voting {
+  padding-bottom: 1em;
+}
+
+section.admin-popular-tab-list {
+  & > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.btn-search {
+  font-family: FontAwesome; //\2605
+  &:before {
+    content: "\f002";
+    padding-right: 0.6em;
+  }
+}
+
+section.home-artists{
+  padding-top: 30px;
+}

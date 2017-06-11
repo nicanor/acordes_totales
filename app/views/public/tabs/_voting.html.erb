@@ -1,0 +1,7 @@
+<% if vote %>
+  <%= link_to t(:your_rank), '#', class: 'vote-label' %>
+  <%= content_tag :span, nil, class: "vote-ranking ranking-#{vote.value.round}" %>
+<% else %>
+  <%= link_to t(:please_rank), '#', class: 'vote-label' %>
+  <%= vote_stars tab %>
+<% end %>

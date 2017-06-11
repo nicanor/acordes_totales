@@ -1,0 +1,5 @@
+<%= link_to [:admin, artist], class: 'list-group-item' do %>
+  <%= icon :child %> <%= artist.name %>
+  <span class="visits_count badge"><%= artist.visits_count %></span>
+  <span class="artist-slug badge"><%= artist.slug %></span>  
+<% end %>

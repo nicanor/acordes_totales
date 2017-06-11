@@ -1,0 +1,163 @@
+en:
+  admin:      'Admin'
+  admin_html: 'Total<span class="secondary">admin</span>'
+  brand:      'Total Chords'
+  brand_html: 'Total<span class="secondary">chords</span>'
+  footer:     'Copy Heart: Total Chords'
+  home:       'Home'
+  tag_title:  'Total Chords'
+  site_description: 'Find the best chords and tabs for guitar and other instruments.'
+
+  created: 'Successfully created'
+  updated: 'Successfully updated'
+  deleted: 'Successfully deleted'
+
+  failed:  'La acción falló'
+  delete_error: 'El elemento no pudo ser eliminado'
+  invalid_action: 'Acción inválida'
+
+  edit:   'Editar'
+  delete: 'Eliminar'
+
+  back:    'Volver'
+  cancel:  'Cancelar'
+  confirm: '¿Está seguro?'
+  wait:    'Espere...'
+  query:   'Buscar Artista o Tablatura'
+  search:  'Buscar'
+
+  click_here:     'Haz click aquí'
+  settings:       'Configuración de cuenta'
+  public_profile: 'Perfil Público'
+  results:
+    one:          '1 resultado'
+    other:        '%{count} resultados'
+
+  login:               'Iniciar Sesión'
+  logout:              'Cerrar Sesión'
+  logged_in:           'Ha iniciado sesión correctamente'
+  logged_out:          'Ha cerrado sesión correctamente'
+  how_to_login:        'Ingresa tu dirección de correo electrónico y contraseña para iniciar sesión.'
+  login_required:      'No está autorizado para realizar esa acción'
+  invalid_credentials: 'Email o Contraseña inválidos'
+  authorization_error: 'No está autorizado a realizar esa acción.'
+  or: 'ó'
+  login_with_facebook: 'Conectar con Facebook'
+
+  change_password:    'Cambiar contraseña'
+  enter_new_password: 'Ingresa tu nueva contraseña'
+  forgot_password:    '¿Olvidaste tu contraseña?'
+  forgot_password_instructions: 'Escribe tu Dirección de Correo Electrónico y te enviaremos un email con instrucciones para recuperar tu contraseña.'
+  instructions_sended: 'Se te han enviado instrucciones a tu Dirección de Correo Electrónico.'
+  password_updated:    'La contraseña fue actualizada exitosamente. Por favor inicia sesión con tu nueva contraseña.'
+
+  # Registration
+  register:       'Regístrate'
+  is_free:        'Es gratis y lo seguirá siendo.'
+  not_registered: '¿No estás registrado?'
+  registered:     'Se ha registrado con éxito a AcordesTOTALES. Se le enviará un email a su dirección de Correo Electrónico para que active su cuenta. Muchas gracias.'
+  register_error: 'Uno o más campos con errores'
+  thanks_for_registration: 'Gracias por registrarse! Tenga un buen día!'
+  welcome:                 'Bienvenido a AcordesTOTALES'
+
+  activated:       'Usuario activado con éxito. Ya puede iniciar sesión.'
+  activation_link: 'Para activar su cuenta,'
+
+  reset_password:      'Recupere su contraseña'
+  reset_password_link: 'Para recuperar su contraseña,'
+  thanks:              'Muchas gracias! Tenga un buen día!'
+
+  about: 'Infórmate'
+  find:  'Encuentra'
+  share: 'Comparte'
+
+  biografy: 'Biografía'
+  biografy_of: "Biografía de %{artist}"
+  source: 'Fuente:'
+  popular_artists: 'Artistas más populares'
+  popular_tabs:    'Tablaturas populares'  
+  by: 'Por:'
+  anonymous: 'Anónimo'
+
+  artist:    'Artista'
+  artists:   'Artistas'
+  favorite:  'Tablatura Favorita'
+  favorites: 'Tablaturas Favoritas'
+  page:      'Página'
+  pages:     'Páginas'
+  tab:       'Tablatura'
+  tabs:      'Tablaturas'
+  user:      'Usuario'
+  users:     'Usuarios'
+
+  new_artist:   'Nuevo Artista'
+  new_page:     'Nueva Página'
+  new_tab:      'Nueva Tablatura'
+  new_tab_html: '<i class="fa fa-plus"></i> Nueva Tablatura'
+  edit_tab:     'Editar Tablatura'
+  your_tabs:    'Tus Tablaturas'
+  new_user:     'Nuevo Usuario'
+
+  favorite_add:     'Agregar a Favoritos'
+  favorite_remove:  'Quitar de Favoritos'
+  favorite_added:   'Agregado a Favoritos'
+  favorite_removed: 'Quitado de Favoritos'
+
+  name:       'Nombre'
+  first_name: 'Nombre'
+  last_name:  'Apellido'
+  email:      'Correo Electrónico'
+
+  protected_page: 'Página Protejida'
+
+  # Star Rating
+  awful: 'Pésima'
+  bad:   'Mala'
+  ok:    'Buena'
+  good:  'Muy buena'
+  great: 'Perfecta'
+
+  your_rank:    'Tu puntuación:'
+  please_rank:  'Puntúa:'
+  voted:        'Muchas gracias por darle puntaje a esta transcripción.'
+  voting_error: 'No puede votar esta tablatura'
+
+  not_found: 'Página no encontrada'
+  not_found_explanation: 'La página que intentó acceder no existe o ha sido eliminada. Por favor pruebe con otra dirección.'
+
+  simple_form:
+    labels:
+
+      tab:
+        artist:  'Artista'
+        content: 'Contenido'
+        title:   'Título'
+
+      user:
+        first_name: 'Nombre'
+        last_name:  'Apellido'
+        email:      'Correo Electrónico'
+        password:   'Contraseña'
+        password_confirmation: 'Confirmación de la contraseña'
+        nationality: 'Nacionalidad'
+        birth_date:  'Fecha de Nacimiento'
+        photo:       'Foto'
+        about:       'Información'
+
+      login_form:
+        email:    'Dirección de Correo Electrónico'
+        password: 'Contraseña'
+    hints:
+      user:
+        email: 'Una vez registrado te llegará un email de activación.'
+
+  helpers:
+    submit:
+      create: 'Crear'
+      update: 'Actualizar'
+
+  user_mailer:
+    activation_needed_email:
+      subject: 'Bienvenido a Acordes Totales. Por favor active su cuenta.'
+    reset_password_email:
+      subject: 'Instrucciones para recuperar su contraseña en Acordes Totales.'

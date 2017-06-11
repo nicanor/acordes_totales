@@ -1,0 +1,5 @@
+$('#tab-content').html('<%= j @content.html_safe %>');
+$( '#transposer').html('<%= j transpose_btn_group  @tab, semitones: @semitones, notation: @notation %>');
+$(   '#notation').html('<%= j change_notation_link @tab, semitones: @semitones, notation: @notation %>');
+
+initialize_chords();

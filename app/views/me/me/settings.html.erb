@@ -1,0 +1,38 @@
+<header class="page-header">
+  <nav class="pull-right">
+    <%= link_to t(:back), me_root_path, class: [:btn, :'btn-primary'] %>
+  </nav>
+  <h1><%= t :settings %></h1>
+</header>
+
+<%= custom_form_for @me, url: me_update_path, method: :patch do |f| %>
+
+  <section class="row">
+    <section class="col-md-6"><%= f.input :first_name, autofocus: true %></section>
+    <section class="col-md-6"><%= f.input :last_name %></section>
+  </section>
+
+  <%= f.input :email, hint: false, disabled: true %>
+
+  <section class="row">
+    <section class="col-md-6">
+      <%= f.input :nationality, autofocus: true, as: :country %>
+      <%= f.input :birth_date, as: :string, hint: 'aaaa-mm-dd' %>
+    </section>
+    <section class="col-md-6">
+      <%= f.input :photo do %>
+        <%= image_tag @me.photo.thumb('140x140#').url, class: :thumbnail if @me.photo %>
+        <%= f.file_field :photo %>
+      <% end %>
+    </section>
+  </section>
+
+  <%= f.input :about %>
+
+  <h2><%= t :change_password %></h2>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+
+  <%= f.button :submit, name: nil, data: { disable_with: t(:wait) }, class: 'btn btn-primary' %>
+  <%= link_to t(:cancel), me_root_path, class: 'btn btn-default' %>
+<% end %>

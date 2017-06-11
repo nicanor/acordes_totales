@@ -1,0 +1,22 @@
+<header class="admin">
+  <section class="pull-right">    
+    <%= link_to t(:pages) , [:admin, :pages], class: 'btn btn-default' %>    
+    <%= link_to t(:edit)  , '#collapse-edit', data: {toggle: :collapse}, class: 'btn btn-success' %>
+    <%= link_to t(:delete), [:admin,  @page], method: :delete, data: {confirm: t(:confirm)}, class: 'btn btn-danger' unless @page.protected?%>
+  </section>
+  <h1>
+    <%= icon :file %> <%= @page.title %>    
+    <%= span_lock if @page.protected? %>
+    <small>/<%= @page.slug %></small>
+  </h1>
+</header>
+
+<section id="collapse-edit" class="collapse out">
+  <%= render 'form' %>
+</section>
+
+<section class="well page-description">
+  <%= @page.description %>
+</section>
+
+<%= textilize(@page.content).html_safe %>

@@ -1,0 +1,5 @@
+<%= link_to [favorite.artist, favorite.tab], class: 'list-group-item' do %>
+  <%= favorite.tab.title %>
+  <span class="badge"><%= favorite.tab.tab_type %></span>
+  <%= content_tag :span, favorite.artist.name, class: 'badge artist-name' %>
+<% end %>

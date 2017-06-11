@@ -1,0 +1,33 @@
+<section id="favorite">
+  <%= favorite_link @tab, @is_favorite if logged_in? %>
+</section>
+
+<h1>
+  <%= @tab.title %>
+  <small id="artist-link"><%= link_to @artist.name, @artist %></small>
+</h1>
+
+<%= transcriptor_link @tab.user %>
+
+<section id="voting" class="vote">
+  <%= render 'voting', tab: @tab, vote: @vote %>
+</section>
+
+<div class="btn-toolbar" role="toolbar">
+  <section id="notation" class="btn-group btn-group-sm">
+    <%= change_notation_link @tab, semitones: @semitones, notation: @notation %>
+  </section>
+
+  <section id="transposer" class="btn-group btn-group-sm">
+    <%= transpose_btn_group @tab, semitones: @semitones, notation: @notation %>
+  </section>
+
+  <section id="print" class="btn-group btn-group-sm">
+    <%= link_to icon(:print), 'javascript:window.print();', class: 'tooltiped btn btn-default', title: t(:print) %>
+  </section>
+
+  <section id="scroll" class="btn-group btn-group-sm">
+    <%= link_to icon('arrow-circle-down'), "#", class: 'tooltiped btn btn-default', title: t(:scroll) %>
+  </section>
+
+</div>

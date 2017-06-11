@@ -1,0 +1,6 @@
+<%= form_for (@search || Search.new), url: search_path, method: :get, html: {class: 'navbar-form navbar-left'} do |f| %>
+  <section class="form-group">
+    <%= f.text_field :query, class: 'form-control', placeholder: t(:query), autofocus: true %>
+  </section>
+  <%= submit_tag t(:search), name: nil, class: [:btn, :'btn-primary'] %>
+<% end %>

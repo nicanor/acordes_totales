@@ -1,0 +1,9 @@
+<header class="admin">
+  <section class="pull-right">
+    <%= link_to @tab.artist.name, [:admin, @tab.artist], class: 'btn btn-default' %>
+    <%= link_to t(:delete), [:admin, @tab], method: :delete, data: {confirm: t(:confirm)}, class: 'btn btn-danger' %>
+  </section>
+  <h1><%= icon :music %> <%= @tab.title %></h1>
+</header>
+
+<%= render 'form' %>

@@ -1,0 +1,5 @@
+<%= link_to artist_tab_path(tab.artist, tab), class: 'list-group-item' do %>
+  <%= tab.title %>
+  <%= content_tag :span, nil, class: "star-ranking ranking-#{stars(tab.ranking)}", title: tab.ranking %>
+  <%= content_tag :span, tab.artist.name, class: 'badge artist-name' if show_artist %>
+<% end %>

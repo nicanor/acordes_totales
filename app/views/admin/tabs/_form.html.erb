@@ -1,0 +1,13 @@
+<%= custom_form_for [:admin, @artist, @tab] do |f| %>
+  <%= f.input :title, autofocus: true %>
+  <%= f.input :source %>
+
+  <div class="row admin-checkboxes">
+    <div class="col-md-3"><%= f.input :active %></div>
+    <div class="col-md-3 col-md-offset-1"><%= f.input :revised %></div>
+  </div>
+
+  <%= f.input :content, input_html: {class: 'form-control monospaced-field'} %>
+
+  <%= f.button :submit, name: nil, data: {disable_with: t(:wait)}, class: [:btn, :'btn-primary'] %>
+<% end %>

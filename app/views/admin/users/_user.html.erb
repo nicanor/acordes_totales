@@ -1,0 +1,6 @@
+<%= link_to [:admin, user], class: 'list-group-item' do %>
+
+  <%= icon :user %> <%= content_tag :strong, user.email %> - <%= user.first_name %> <%= user.last_name %>
+  <%= content_tag :span, user.activation_state, class: [user.activation_state, :badge] %>
+  <%= content_tag :span, l(user.created_at), class: :badge %>
+<% end %>

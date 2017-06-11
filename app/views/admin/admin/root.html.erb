@@ -1,0 +1,22 @@
+<header class="admin">
+  <h1><%= t :admin %></h1>
+</header>
+
+<dl class="dl-hdorizontal">
+  <dt><%= t :visits %>:</dt>
+  <dd><%= @visit_count %></dd>
+
+  <dt><%= t :votes %>:</dt>
+  <dd><%= @vote_count %></dd>
+</dl>
+
+<section class="admin-popular-tab-list">
+<% @tabs.each do |tab| %>
+  <%= link_to [:admin, tab], class: 'list-group-item' do %>
+    <%= tab.revised ? icon(:'check-square', class: 'text-success') : icon(:'square') %>
+    <%= tab.title %> - <small><%= tab.artist.name %></small>
+    <%= content_tag :span, nil, class: "star-ranking ranking-#{tab.ranking.round}", title: tab.ranking %>
+    <span class="visits_count badge"><%= tab.visits_count %></span>
+  <% end %>
+<% end %>
+</section>

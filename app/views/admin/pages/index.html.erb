@@ -1,0 +1,14 @@
+<header class="admin">
+  <section class="pull-right">
+    <%= link_to t(:new_page), '#collapse-new-page', data: {toggle: :collapse}, class: 'btn btn-primary' %>
+  </section>
+  <h1><%= icon :file %> <%= t :pages %></h1>
+</header>
+
+<section id="collapse-new-page" class="mini-form collapse out">
+  <%= render 'form' %>
+</section>
+
+<section class="list-group">
+  <%= render @pages %>
+</section>

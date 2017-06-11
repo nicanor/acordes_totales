@@ -1,0 +1,10 @@
+<header class="admin">
+  <%= link_to t(:new_artist), '#collapse', data: {toggle: :collapse}, class: 'btn btn-primary pull-right' %>
+  <h1><%= icon :child %> <%= t :artists %></h1>
+</header>
+
+<%= content_tag :section, render('form'), id: :collapse, class: 'mini-form collapse out' %>
+<%= content_tag :section, render('filter_form', name: params[:name]), class: 'well well-sm' %>
+
+<%= content_tag :section, render(@artists), class: 'tab-list list-group' %>
+<%= paginate @artists, theme: :bootstrap %>

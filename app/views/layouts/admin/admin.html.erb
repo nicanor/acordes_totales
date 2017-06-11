@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head><%= render 'head' %></head>
+  <body>
+
+    <%= render 'navbar' %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md-2">
+          <nav class="well">
+            <%= render 'nav' %>
+          </nav>
+        </aside>
+        <section class="col-md-10 main">
+          <%= flash_messages if flash %>
+          <%= yield %>
+        </section>
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>

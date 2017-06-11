@@ -1,0 +1,10 @@
+<header class="page-header">
+  <h1><%= @page.title %></h1> 
+</header>
+
+<%= textilize(@page.content).html_safe %>
+
+<ul class="pager">
+  <li class="previous"><%= link_to @prev.title, @prev if @prev %></li>
+  <li class="next"><%=     link_to @next.title, @next if @next %></li>
+</ul>

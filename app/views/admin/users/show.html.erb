@@ -1,0 +1,21 @@
+<header class="admin">
+  <section class="pull-right">
+    <%= link_to t(:users),  [:admin, :users], class: 'btn btn-default' %>
+    <%= link_to t(:delete), [:admin,  @user], class: 'btn btn-danger', method: :delete, data: {confirm: t(:confirm)} %>
+  </section>  
+  <h1><%= icon :user %> <%= @user.first_name %> <%= @user.last_name %></h1>
+</header>
+
+<%= custom_form_for [:admin, @user] do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email, hint: false %>
+  <%= f.input :activation_state, collection: ['active', 'pending'] %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
+
+<h2><%= icon 'file-text' %> <%= t :tabs %></h2>
+<%= content_tag :section, render(@user.tabs), class: 'tab-list list-group' %>
+
+<h2><%= icon :bookmark %> <%= t :favorites %></h2>
+<%= content_tag :section, render(partial: 'me/me/favorite', collection: @user.favorites), class: 'tab-list list-group' %>

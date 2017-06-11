@@ -1,0 +1,28 @@
+<header class="page-header">
+  <h1><%= @artist.name %></h1> 
+</header>
+
+<section class="tab-list list-group">
+  <%= render @tabs, show_artist: false %>
+</section>
+
+<% if @artist.bio %>
+<section id="bio">
+  <header><h1><%= icon :book %> <%= t :biografy %></h1></header>
+
+  <% if @artist.bio_source %>
+    <p class="source">
+      <strong><%= t :source %></strong>
+      <%= link_to @artist.bio_source, @artist.bio_source, target: '_blank' %>
+    </p>
+  <% end %>
+
+  <%= textilize(@artist.bio).html_safe %>
+</section>
+<% end %>
+
+<%= content_for :aside_right do %>
+  <%= image_tag @artist.photo.thumb('300x450').url, class: 'artist-photo thumbnail' if @artist.photo %>
+  <%= link_to t(:biografy_of, artist: @artist.name), '#bio' if @artist.bio %>
+  <%= render 'tab_aside', tabs: @artist_popular_tabs %>
+<% end %>

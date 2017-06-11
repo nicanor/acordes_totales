@@ -1,0 +1,5 @@
+<%= link_to [:admin, page], class: 'list-group-item' do %>
+  <%= icon :file %> <%= page.title %>  
+  <%= span_lock if page.protected? %>
+  <span class="badge"><%= page.slug %></span>  
+<% end %>

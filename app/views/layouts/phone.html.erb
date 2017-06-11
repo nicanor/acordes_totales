@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head><%= render 'head' %></head>
+  <body>
+
+    <%= render 'navbar' %>
+
+    <section id="content" class="container-fluid">
+      <%= flash_messages if flash %>
+      <%= yield %>
+      <%= render 'nav' %>
+      <%= render 'popular_artists', artists: @artists %>
+      <%= content_for?(:aside_right) ? yield(:aside_right) : render('tab_aside', tabs: @tabs) %>
+    </section> <!-- /container -->
+
+    <%= render 'footer' %>
+    <%= render 'analytics' %>
+  </body>
+</html>
